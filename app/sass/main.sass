@@ -1,0 +1,708 @@
+@import 'fonts'
+@import 'vars'
+
+body
+	margin: 0
+	padding: 0
+	font-family: $default-font
+	position: relative
+	font-size: 16px
+	overflow-x: hidden
+	min-width: 320px
+	line-height: 1.75
+	background: #fff
+
+a:hover
+	text-decoration: none
+	color: #fff
+
+ul, ol
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+section
+	position: relative
+	z-index: 10
+	background: #fff
+
+.scrollTop
+	width: 50px
+	height: 50px
+	border: 1px solid $gray-light
+	background: $gray-light
+	border-radius: 50%
+	position: fixed
+	bottom: 20px
+	right: 20px
+	z-index: 20
+	display: none
+	transition: .3s
+	a
+		display: block
+		margin: 0 auto
+		line-height: 50px
+		text-align: center
+		font-size: 30px
+		color: $text-light
+
+.highlighted
+	background: $gray
+
+.h1, .h2, .h3, .h4, .h5, .h6
+	margin: 0
+	color: $text-dark
+	font-weight: 400
+
+.h2
+	font-size: 52px
+	line-height: 1
+
+.h4
+	font-size: 26px
+	font-weight: 300
+
+.h6, .h6_highlighted
+	text-transform: uppercase
+	letter-spacing: 1px
+	font-size: 12px
+	font-weight: bold
+	&_highlighted
+		color: $text-light
+
+.description
+	color: $text-light
+	font-size: 18px
+	width: 100%
+	line-height: 1.6
+
+.btn
+	text-decoration: none
+	border: 1px solid $gray-light
+	border-radius: 40px
+	color: $text-dark
+	display: block
+	width: 220px
+	height: 50px
+	line-height: 38px
+	margin: 0 auto
+	text-align: center
+	&.focus, &:focus
+		outline: 0
+		box-shadow: none
+	&_blue
+		background-color: $blue
+		border: 1px solid $blue
+		width: 110px
+		height: 40px
+		line-height: 25px
+		display: block
+		color: #fff
+		a
+			color: #fff
+			.fa-apple
+				font-size: 16px
+				margin-right: 3px
+			&:hover
+				color: #fff
+
+.line
+	background: $blue
+	width: 45px
+	height: 2px
+	display: block
+	margin: 40px auto
+
+/* burger */
+
+.burger
+	position: absolute
+	top: 57px
+	left: 100px
+	transition: .4s
+	width: 15px
+	height: 15px
+	&__line, &__line::before, &__line::after
+		top: 0
+		left: 0
+		width: 15px
+		height: 2px
+		background: $text-dark
+		display: block
+		content: ''
+		position: absolute
+	&__line::before
+		top: 5px
+	&__line::after
+		top: 10px
+	&_active
+		top: 38px
+
+/* menu */
+
+.menu
+	&__item
+		display: flex
+		list-style-type: none
+		margin: 0
+		padding: 0
+	&__link
+		margin: 0 22px
+		a
+			text-decoration: none
+			color: #292A30
+			font-size: 16px
+			&:hover
+				color: $blue
+				transition-delay: .1s
+	&__link_help
+		a
+			color: #ADADAF
+	&__link_btn
+		margin: -5px 0 0 20px
+		height: 40px
+		width: 110px
+		a
+			.fa-apple
+				margin-right: 3px
+			&:hover
+				color: #fff
+
+/* left-menu */
+
+.left-menu
+	width: 380px
+	height: 100vh
+	position: fixed
+	z-index: 50
+	top: 0
+	left: -500px
+	background: $dark
+	padding: 48px 40px
+	transition: .5s
+	&__logo
+		margin-bottom: 34px
+	&__menu
+		.menu__item
+			display: block
+			.menu__link
+				margin: 4px 0 0 0
+				a
+					color: #fff
+					transition: .25s
+					&:hover
+						color: $blue
+			.menu__link_btn
+				margin: 20px 0 0 0
+	&__container
+		font-size: 14px
+		position: absolute
+		bottom: 24px
+		left: 40px
+		color: $gray-medium
+		a
+			text-decoration: underline
+	&__social
+		.social
+			&__link
+				padding-top: 15px
+				font-size: 15px
+				a:hover
+					color: #fff
+	&_visible
+		left: 0
+	&__close
+		position: absolute
+		top: 50px
+		right: 20px
+		cursor: pointer
+		color: #fff
+		font-size: 15px
+
+
+/* top-line */
+
+.top-line
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 20
+	width: 100%
+	margin: 0 auto
+	display: flex
+	justify-content: space-between
+	padding: 50px 100px 50px 140px
+	transition: .4s
+	&_active
+		padding: 30px 100px 30px 140px
+		background: #fff
+		box-shadow: 0px 1px 7px #DADADA
+	&__logo
+		margin: 0 auto
+
+/* HEADER */
+
+.header
+	padding-top: 130px
+	height: 1000px
+	position: relative
+	text-align: center
+	background: url('../img/banner_background.jpg') center no-repeat
+	background-size: cover
+	&__title
+		margin: 90px 0 10px 0
+		font-size: 62px
+	&__description
+		// font-size: 1.25rem
+		width: 750px
+		line-height: 1.4
+		margin: 0 auto
+		font-size: 20px
+	&__btn
+		margin: 58px auto 10px
+		line-height: 37px
+		background: $bg-gray
+		color: $text-dark
+		position: relative
+		padding-left: 50px
+		&:hover
+			color: $text-dark
+		.lnr-film-play
+			font-size: 18px
+			position: absolute
+			top: 16px
+			left: 45px
+	&__phone
+		position: absolute
+		margin: 0 auto
+		left: 0
+		right: 0
+		margin-top: 60px
+		z-index: 5
+
+/* ADVANTAGES */
+
+.advantage
+	padding: 30px 0 0
+	&__item
+		padding: 70px 40px 40px
+	&__img
+		color: $blue
+		font-size: 44px
+	&__title
+		margin: 50px 0 30px 0
+
+/* FEATURES */
+
+.feature
+	padding-top: 100px
+	&__iphone
+		margin-left: -375px
+		width: 900px
+		height: auto
+	&__map
+		width: 1000px
+		height: auto
+		margin-top: 100px
+	&__item
+		padding-top: 110px
+		&_right
+			padding-left: 110px
+		&_left
+			padding-right: 110px
+	&__title
+		margin-bottom: 60px
+	&__description
+		margin-bottom: 30px
+	&__container
+		margin-top: 27px
+	&__btn
+		height: 42px
+		line-height: 30px
+		margin-top: 30px
+		display: inline-block
+		&_blue
+			text-align: left
+			padding-left: 17px
+			width: 200px
+			i
+				padding-left: 55px
+				font-size: 14px
+		&_white
+				width: 120px
+				margin-left: 20px
+	&__h6
+		margin-top: 50px
+	&__link
+		margin-right: 25px
+		display: inline-block
+
+.map
+	padding-bottom: 100px
+
+/* INTERFACE */
+
+.interface
+	padding-top: 150px
+	text-align: center
+	&__h6
+		margin-bottom: 30px
+	&__container
+		display: flex
+		justify-content: center
+		align-items: center
+	&__img
+		width: 21%
+		height: 40%
+		padding: 0 1%
+		&_main
+			width: 24%
+
+.form-subscribe
+	position: relative
+	border: 1px solid silver
+	border-radius: 40px
+	width: 500px
+	height: 50px
+	margin: 60px auto 0
+	padding-left: 25px
+	&__input, &__input_white
+		background: $gray
+		border: 1px solid $gray
+		border-radius: 50%
+		width: 300px
+		height: 48px
+		box-sizing: border-box
+		outline: none
+		font-size: 16px
+		color: $text-dark
+		padding-left: 25px
+		position: absolute
+		left: 0
+		top: 0
+		&::-webkit-input-placeholder
+			color: grey
+			font-size: 16px
+		&::-moz-placeholder
+			color: grey
+			font-size: 16px
+		&:-moz-placeholder
+			color: grey
+			font-size: 16px
+		&:-ms-input-placeholder
+			color: grey
+			font-size: 16px	
+		&_white
+			border: 1px solid #fff
+			background: #fff
+	&__btn
+		position: absolute
+		right: 3px
+		top: 3px
+		height: 42px
+		width: 140px
+		line-height: 30px
+		display: block
+		background: $green
+		border: 1px solid $green
+		color: #fff
+		font-size: 16px
+		&:hover
+			color: #fff
+
+.email
+	text-align: center
+	padding-bottom: 125px
+	&__logo, &__download
+		padding-top: 150px
+		color: $text-light
+		text-transform: uppercase
+		font-size: 12px
+		letter-spacing: 1px
+		span
+			font-weight: bold
+	&__download
+		padding-top: 70px
+	&__title
+		margin-top: 20px
+	&__app-store
+		border: 0px solid #000
+		border-radius: 40px
+		margin-top: 15px
+
+/* REVIEWS */
+
+.carousel
+	position: relative
+	&-indicators
+		position: absolute
+		top: 125px
+		align-items: baseline
+		height: 200px
+	&-indicators .carousel-indicators__item
+		width: 100px
+		height: 100px
+		text-indent: 0
+		margin: 0 60px
+		img
+			border: 1px solid #000 transparent
+			border-radius: 50%
+			width: 90px
+			opacity: .2
+			cursor: pointer
+			transition: .4s
+	&-indicators .carousel-indicators__item.active
+		img
+			width: 130px
+			opacity: 1
+			box-shadow: 10px 10px 30px #ccc
+	&-item
+		text-align: center
+		padding: 100px 0
+		margin-top: 160px
+		&__title
+			margin: 35px 0 38px
+			font-size: 32px
+			color: $text-dark
+			font-weight: 300
+			line-height: 1.25
+		&__text
+			margin: 17px auto
+			width: 550px
+			font-size: 18px
+			color: $text-light
+			line-height: 1.6
+		&__author
+			color: #333
+			font-size: 12px
+			text-transform: uppercase
+			font-weight: bold
+			margin-top: 60px
+			letter-spacing: 1px
+	&-control-prev, &-control-next
+		color: #C6C7CA
+		width: 30px
+		height: 30px
+		margin: 170px 0 0 100px
+		font-size: 35px
+		z-index: 16
+		transition: .2s
+		&:hover
+			color: #ccc
+		&:focus
+			color: #C6C7CA
+	&-control-next
+		margin-right: 100px
+
+.stars-rating
+	&__star
+		color: $text-light
+		font-size: 18px
+		&_active
+			color: $gold
+
+/* PLAN */
+
+.plan
+	padding: 150px 0
+	
+.slider
+	width: 240px
+	height: 50px
+	border: 1px solid $gray-medium
+	border-radius: 30px
+	display: flex
+	line-height: 50px
+	justify-content: space-around
+	text-align: center
+	position: relative
+	&__individual, &__company
+		width: 120px
+	&__link
+		color: $text-light
+		display: block
+		position: relative
+		z-index: 30
+		&:hover
+			color: $text-light
+	&__btn
+		width: 120px
+		height: 42px
+		background: #fff
+		position: absolute
+		top: 3px
+		left: 3px
+		border: 1px solid #fff
+		border-radius: 30px
+		box-shadow: 1px 1px 5px $gray-medium
+		transition: .5s
+		transition-delay: .15s
+		&_second
+			left: 115px
+			box-shadow: -1px 1px 5px $gray-medium
+
+.choose
+	padding: 30px
+	&__h6
+		margin-top: 70px
+	&__slider
+		margin-top: 20px
+	&__description
+		line-height: 1.5
+		width: 370px
+		margin: 70px 0 0 0
+	&__link
+		font-size: 14px
+		letter-spacing: 0
+		margin-top: 30px
+		span
+			text-transform: none
+			font-weight: 500
+			color: $text-light
+		a
+			text-decoration: underline
+			text-transform: none
+			font-weight: 500
+
+@keyframes rate
+  	0%
+  		transform: scale(.97)
+  	100%
+  		transform: scale(1)
+
+.rate
+	display: flex
+	align-items: baseline
+	&__individual, &__company
+		display: none
+		visibility: hidden
+		transition: .5s
+		animation: rate .2s linear 0s 1
+	&_visible
+		display: flex
+		visibility: visible
+	&__starter
+		text-align: center
+		width: 320px
+		background: #fff
+		padding: 75px 0
+		box-shadow: 15px 20px 30px #ccc
+		z-index: 2
+	&__pro
+		text-align: center
+		width: 320px
+		background: #EBEBED
+		padding: 45px 0
+		margin: 30px 0
+	&__title
+		font-weight: 300
+		font-size: 30px
+	&__price
+		border: 1px solid #D3D3D5
+		border-radius: 20px
+		width: 70px
+		height: 30px
+		line-height: 30px
+		margin: 25px auto 40px auto
+	&__description
+		margin-bottom: 25px
+	&__feature
+		margin-top: 10px
+		i
+			margin-right: 5px
+			color: $green
+	&__btn
+		margin-top: 75px
+		font-size: 16px
+		width: 200px
+		&:hover
+			color: #fff
+		&_pro
+			margin-top: 37px
+			background: #EBEBED
+			color: $blue
+			&:hover
+				color: $blue
+
+/* SUBSCRIBE */
+
+.subscribe
+	text-align: center
+	padding: 125px 0
+	&__description
+		font-size: 14px
+		margin-top: 15px
+
+/* FOOTER */
+
+.social
+	list-style-type: none
+	display: flex
+	margin: 0
+	padding: 0
+	&__link
+		padding: 35px 25px 0 0
+		font-size: 18px
+		a
+			color: #BCBCBD
+			transition: .2s
+			&:hover
+				color: #000
+
+.footer
+	display: flex
+	&__item
+		padding-right: 70px
+	&__right
+		display: flex
+		margin: 0px auto 70px
+	&__h6
+		margin: 10px 0
+	&__description
+		font-size: 14px
+		width: 300px
+		margin: 30px 0 0 0
+		line-height: 1.75
+	&__download
+		margin-top: 17px
+	&__block
+		padding: 0 35px
+	&__list
+	&__bottom
+		margin-top: 140px
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__more
+		font-size: 14px
+	&__copyright
+		display: flex
+		align-items: center
+		margin-top: 3px
+		span
+			display: block
+			text-transform: uppercase
+			font-size: 9px
+			font-weight: bold
+			letter-spacing: .5px
+			margin-right: 10px
+			white-space: nowrap
+	&__craftwork
+		margin-bottom: 5px
+
+.list
+	list-style-type: none
+	margin: 0
+	padding: 0
+	&__link	
+		padding-top: 10px
+		a
+			text-decoration: none
+			color: $text-light
+			font-size: 16px
+			letter-spacing: .2px
+
+.visible
+	display: block
+
+@import 'media'

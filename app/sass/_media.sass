@@ -1,0 +1,198 @@
+@import 'vars'
+
+@media only screen and (max-width : 1200px)
+	.test
+		font-size: 20px
+
+@media only screen and (max-width : 992px)
+	.top-line__menu
+		display: none
+	.h1
+		font-size: 50px
+	.description
+		font-size: 18px
+		width: 100%
+	.feature
+		&__iphone, &__map
+			display: none
+		&__item
+			&_right, &_left
+				padding: 0 10px
+		&__title
+			margin-bottom: 35px
+		&__description
+			margin-bottom: 15px
+		&__container
+			text-align: center
+		&__btn
+			margin: 20px 5px
+			&_blue
+				width: 140px
+				text-align: center
+				i
+					display: none
+	.carousel
+		&-control-prev, &-control-next
+			display: none
+	.footer
+		&__bottom
+			flex-wrap: wrap
+		&__right
+			margin-top: 70px
+		&__bottom
+			margin-top: 0
+
+@media only screen and (max-width : 768px)
+	.header
+		&__title
+			font-size: 45px
+			margin-top: 30px
+	.h2
+		font-size: 38px
+	.advantage
+		&__title
+			margin: 15px 0 20px
+		&__item
+			padding: 30px 20px 20px
+	.feature
+		&__iphone, &__map, &__img
+			display: none
+		&__item
+			&_right, &_left
+				padding: 0 10px
+		&__title
+			margin-bottom: 35px
+		&__description
+			margin-bottom: 15px
+		&__container
+			text-align: center
+		&__btn
+			margin: 20px 5px
+			&_blue
+				width: 140px
+				text-align: center
+				i
+					display: none
+	.interface
+		padding-top: 100px
+	.email
+		padding-bottom: 100px
+		&__download
+			padding-top: 50px
+	.form-subscribe
+		width: 290px
+		&__input, &__input_white
+			width: 160px
+		&__btn
+			width: 110px
+			i
+				display: none
+	.carousel
+		&-indicators
+			top: 100px
+			height: 100px
+		&-indicators .carousel-indicators__item
+			margin: 0 20px
+			img
+				width: 70px
+		&-indicators .carousel-indicators__item.active
+			img
+				width: 90px
+		&-item
+			&__title
+				margin: 10px 0 20px
+				font-size: 24px
+			&__text
+				width: 100%
+				font-size: 16px
+			&__author
+				margin-top: 30px
+		&-control-prev, &-control-next
+			margin: 210px 0 0 20px
+		&-control-next
+			margin-right: 20px
+	.plan
+		padding: 100px 0
+	.choose
+		&__h6
+			margin-top: 30px
+		&__slider
+			margin-top: 30px
+		&__description
+			line-height: 1.5
+			width: 100%
+			margin: 40px 0 0 0
+	.rate
+		&__starter, &__pro
+			width: 100%
+			padding: 20px 0
+			margin: 10px 20px
+		&__price
+			margin: 15px auto 10px auto
+		&__description
+			margin-bottom: 25px
+		&__feature
+			margin-top: 5px
+		&__btn
+			margin-top: 30px
+	.list
+		&__link
+			a
+				font-size: 14px
+	.footer
+		&__more
+			font-size: 14px
+
+@media only screen and (max-width : 480px)
+	.top-line
+		display: block
+		text-align: center
+		padding: 30px 0
+		&_active
+			padding: 20px 0
+	.left-menu
+		width: 100%
+	.burger
+		top: 38px
+		left: 40px
+		&_active
+			top: 29px
+	.header
+		height: 100vh
+		background: #F8FAF9
+		&__title
+			margin: 50px 0 20px 0
+			font-size: 40px
+		&__description
+			font-size: 16px
+		&__phone
+			display: none
+		&__btn
+			margin-top: 30px
+	.description
+		font-size: 16px
+	.h2
+		font-size: 30px
+	.h4
+		font-size: 22px
+
+@media only screen and (max-width : 350px)
+	.header
+		&__title
+			font-size: 36px
+			margin: 50px auto 20px
+	.feature
+		&__link
+			margin: 10px 0
+			display: block
+		&__h6
+			margin: 0
+	.list
+		&__link
+			padding-top: 0px
+			a
+				font-size: 12px
+
+@media only screen and (max-height : 500px)
+	.left-menu
+		height: 150vh
